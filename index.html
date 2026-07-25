@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrea Martínez Casas — Black and White Studio</title>
+<meta name="description" content="Portafolio de diseño gráfico y consultoría de marketing de Andrea Martínez Casas — Black and White Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#inicio" class="brand">
+    <span class="brand-name">Andrea Martínez Casas</span>
+    <span class="brand-studio">Black and White Studio</span>
+  </a>
+  <nav class="main-nav">
+    <a href="#trabajo">Trabajo</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto" class="nav-cta">Comencemos</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">Portafolio de diseño &amp; marketing</span>
+    <h1>Marcas con propósito y una presencia visual <span class="accent">que conecta.</span></h1>
+    <p>Creo identidades visuales, campañas y sitios web que combinan estrategia, creatividad y funcionalidad para ayudar a negocios y emprendedores a destacar.</p>
+    <span class="hero-circle"></span>
+    <span class="hero-square"></span>
+  </div>
+</section>
+
+<section id="trabajo" class="work">
+  <div class="work-head">
+    <span class="eyebrow">Proyectos</span>
+    <h2>Marcas con las que he trabajado.</h2>
+    <p>Selecciona un logotipo para ver el proyecto completo.</p>
+  </div>
+
+  <div class="work-carousel">
+    <button class="arrow-btn arrow-prev" id="clientsPrev" aria-label="Anterior">←</button>
+    <button class="arrow-btn arrow-next" id="clientsNext" aria-label="Siguiente">→</button>
+
+    <div class="clients-grid" id="clientsGrid"></div>
+
+    <div class="page-dots" id="pageDots"></div>
+  </div>
+</section>
+
+<section id="sobre-mi" class="about">
+  <div class="about-label">
+    <span class="rule"></span>
+    <span>Sobre mí</span>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-side">
+      <img class="about-photo" id="aboutPhoto" src="profile/andrea.jpg" alt="Andrea Martínez Casas">
+      <div>
+        <div class="about-name">Andrea Martínez Casas</div>
+        <div class="about-title">Diseñadora gráfica &amp; consultora de marketing digital</div>
+        <div class="about-location">Guaymas, Sonora, México</div>
+      </div>
+      <div class="about-links">
+        <a href="https://behance.net/graphicsam" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/graphicsam/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <button class="cv-btn" id="downloadCvBtn">Descargar CV (PDF)</button>
+    </div>
+
+    <div class="about-content">
+      <p class="bio" id="bioText"></p>
+
+      <div>
+        <h3>Idiomas</h3>
+        <div class="languages" id="languagesList"></div>
+      </div>
+
+      <div class="skills-cols">
+        <div>
+          <h3>Habilidades duras</h3>
+          <div class="chips" id="skillsChips"></div>
+        </div>
+        <div>
+          <h3>Habilidades blandas</h3>
+          <div class="soft-skills" id="softSkillsList"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Experiencia</h3>
+        <div class="timeline" id="experienceList"></div>
+      </div>
+
+      <div>
+        <h3>Educación</h3>
+        <div class="timeline" id="educationList"></div>
+      </div>
+
+      <div>
+        <h3>Certificaciones &amp; cursos</h3>
+        <div class="cert-list" id="certList"></div>
+        <button class="show-all-courses" id="openAllCoursesBtn">+ Mostrar todos los cursos (53)</button>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <div class="chips" id="servicesChips"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto" class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h2>Hablemos de tu próximo proyecto.</h2>
+      <div class="footer-emails">
+        <a href="mailto:graphics.amc@gmail.com">graphics.amc@gmail.com</a>
+        <a href="mailto:bnw.studiodigital@gmail.com" class="secondary">bnw.studiodigital@gmail.com</a>
+      </div>
+      <div class="footer-phone">Tel: 622 161 3840 · Guaymas, Sonora, México</div>
+    </div>
+    <div class="footer-right">
+      <img class="footer-logo" id="footerLogo" src="logos/bnw-studio-logo.png" alt="Black and White Studio">
+      <div class="footer-social">
+        <a href="https://behance.net/graphicsam" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/graphicsam/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Black and White Studio — Andrea Martínez Casas</div>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Volver arriba">↑</button>
+
+<!-- ALL COURSES MODAL -->
+<div class="modal-overlay courses-overlay" id="allCoursesOverlay" hidden>
+  <div class="modal-card" id="allCoursesCard">
+    <button class="modal-close" id="closeAllCoursesBtn">Cerrar ✕</button>
+    <span class="courses-eyebrow">Formación continua</span>
+    <h2>Certificaciones &amp; cursos completos</h2>
+    <div class="courses-list" id="coursesList"></div>
+  </div>
+</div>
+
+<!-- CLIENT MODAL -->
+<div class="modal-overlay" id="clientOverlay" hidden>
+  <div class="modal-card" id="clientCard">
+    <button class="modal-close" id="closeClientBtn">Cerrar ✕</button>
+
+    <div class="modal-logo-box" id="clientLogoBox" hidden>
+      <img id="clientLogoImg" src="" alt="">
+    </div>
+
+    <span class="modal-category" id="clientCategory"></span>
+    <h2 id="clientName"></h2>
+    <p class="modal-summary" id="clientSummary"></p>
+    <a class="modal-website" id="clientWebsite" href="#" target="_blank" rel="noopener" hidden></a>
+    <div class="age-badge" id="clientAgeBadge" hidden><strong>+18</strong> Contenido para audiencia adulta</div>
+
+    <div class="project-carousel">
+      <div class="project-frame" id="projectFrame">
+        <img id="projectImg" src="" alt="" hidden>
+        <span class="placeholder" id="projectPlaceholder" hidden></span>
+      </div>
+      <button class="arrow-btn arrow-prev" id="projectPrev" aria-label="Anterior">←</button>
+      <button class="arrow-btn arrow-next" id="projectNext" aria-label="Siguiente">→</button>
+      <div class="project-meta">
+        <div>
+          <div class="title" id="projectTitle"></div>
+          <div class="type" id="projectType"></div>
+        </div>
+        <span class="position" id="projectPosition"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/cv.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
