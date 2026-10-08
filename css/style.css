@@ -118,76 +118,17 @@ button { font-family: inherit; }
 
 /* HERO */
 .hero {
-  position: relative;
-  padding: clamp(60px, 12vw, 100px) clamp(20px, 6vw, 48px) clamp(50px, 8vw, 90px);
   background: var(--dark);
   overflow: hidden;
   animation: bwFadeUp 0.7s ease both;
   scroll-margin-top: 80px;
+  line-height: 0;
 }
 
-.hero-inner {
-  position: relative;
-  max-width: 1180px;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-badge {
-  display: inline-block;
-  padding: 9px 20px;
-  border-radius: 999px;
-  background: var(--bg);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin-bottom: 30px;
-}
-
-.hero h1 {
-  font-family: 'Sanchez', serif;
-  font-weight: 400;
-  font-size: clamp(38px, 5.4vw, 60px);
-  line-height: 1.12;
-  margin: 0;
-  max-width: 16ch;
-  color: var(--bg);
-}
-
-.hero h1 .accent { color: var(--accent); }
-
-.hero p {
-  font-size: 17px;
-  line-height: 1.6;
-  color: oklch(0.75 0.005 80);
-  max-width: 48ch;
-  margin: 26px 0 0;
-  font-weight: 300;
-}
-
-.hero-circle {
-  position: absolute;
-  top: -15px;
-  left: -11px;
-  width: 111px;
-  height: 113px;
-  border-radius: 50%;
-  background-color: var(--circle);
-}
-
-.hero-square {
-  position: absolute;
-  top: 209px;
-  right: 40px;
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: var(--bg);
+.hero-banner {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* WORK / CLIENTS */
@@ -816,7 +757,6 @@ button { font-family: inherit; }
   .timeline-row { grid-template-columns: 1fr; gap: 4px; }
   .footer-inner { align-items: flex-start; }
   .footer-right { align-items: flex-start; }
-  .hero-circle, .hero-square { display: none; }
 
   .work-carousel { padding: 0 clamp(38px, 10vw, 50px); }
   .clients-grid {
